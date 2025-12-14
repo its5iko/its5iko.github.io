@@ -10,54 +10,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Gabarito', sans-serif;
-}
 
-/* Container: adds padding so Safari blur doesn't clip */
-.container {
-  padding: 15px; /* buffer for iOS/Safari */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  font-family: 'Gabarito', sans-serif;
 }
 
 /* Glass card frame */
 .glass-card {
   width: 320px;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.22); /* slightly higher opacity for Safari */
+  background: rgba(255, 255, 255, 0.1); /* very transparent */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 20px;
-  border: none;
 
-  /* subtle inner shadow to mask edges on Safari */
+  /* subtle inner glow instead of borders */
   box-shadow: inset 0 0 30px rgba(255,255,255,0.05);
 
-  color: white;
+  color: white; /* text visible */
   text-align: center;
   position: relative;
-
-  /* Safari edge mask */
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
-}
-
-/* Text spacing */
-.glass-card h2 {
-  margin-bottom: 20px;
-}
-
-.glass-card p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-/* Optional: tweak card on Safari only */
-@supports (-webkit-backdrop-filter: blur(1px)) {
-  .glass-card {
-    background: rgba(255,255,255,0.24); /* Safari slightly brighter */
-  }
 }
