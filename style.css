@@ -2,7 +2,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  background-image: url("images/bg.jpeg"); /* your JPEG background */
+  background-image: url("images/bg.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-family: 'Gabarito', sans-serif; /* Use Gabarito font */
+  font-family: 'Gabarito', sans-serif;
 }
 
 /* Glass card */
@@ -22,41 +22,16 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 
-  color: white; /* text color */
+  color: white;
   text-align: center;
   position: relative;
 }
 
-/* Optional shine effect */
-.glass-card::before,
-.glass-card::after {
-  content: '';
-  position: absolute;
-  pointer-events: none;
-}
-
-.glass-card::before {
-  top: 0; left: 0; right: 0; height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.8),
-    transparent
-  );
-}
-
-.glass-card::after {
-  top: 0; left: 0; width: 1px; height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,0.8),
-    transparent,
-    rgba(255,255,255,0.3)
-  );
-}
+/* Remove shine effect to get rid of white borders */
+/* .glass-card::before, .glass-card::after { display: none; } */
 
 /* Headings and text spacing */
 .glass-card h2 {
