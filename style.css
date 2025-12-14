@@ -1,16 +1,20 @@
+/* Global / Background */
 body {
   margin: 0;
   min-height: 100vh;
-  background-image: url("images/bg.jpeg");
+  background-image: url("images/bg.jpeg"); /* matches your JPEG file */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* center the card (optional but nice) */
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Arial, sans-serif;
+  color: white; /* text color */
 }
+
+/* Glass card */
 .glass-card {
   width: 240px;
   height: 360px;
@@ -26,8 +30,11 @@ body {
     inset 0 0 10px 5px rgba(255, 255, 255, 0.5);
   position: relative;
   overflow: hidden;
+  padding: 20px;
+  text-align: center;
 }
 
+/* Shine effect */
 .glass-card::before {
   content: '';
   position: absolute;
