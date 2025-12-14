@@ -1,2 +1,3 @@
 # its5iko.github.io
-My wifi password
+MERCUSYS_8421/MERCUSYS_8421_5G
+25302073
